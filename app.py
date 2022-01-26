@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, request, abort, jsonify
-from features import feature_form_structure
-from model import predict as pd
+# from features import feature_form_structure
+# from model import predict as pd
+from utilities.model import predict as pd
+from utilities.features import feature_form_structure
 
 # Create an instance of Flask
 app = Flask(__name__)

@@ -3,7 +3,6 @@ import joblib
 import numpy as np
 import pandas as pd
 
-
 def predict(data):
     RandomForestRegressorModel = joblib.load("models/random_forest.sav")
     for key, value in data.items():

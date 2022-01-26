@@ -39,7 +39,57 @@
           </div>
           <div class="container-fluid second">
             <div class="row">
-              <div class="col-md-24">{% include 'form.html' %}</div>
+              <!-- <div class="col-md-24">{% include 'form.html' %}</div> -->
+              <form action="{{ url_for('predict')}}"method="post">
+                <div class="col-md-4">
+                  <label for="RoomNumber">Number of Rooms:</label>
+                  <input type="number" class="form-control" id="RoomNumber" name="RoomNumber" placeholder="1-12" value="1" />
+              </div>
+              <div class="col-md-4">
+                  <label for="DistanceFromCBD">Distance From CBD:</label>
+                  <input type="number" class="form-control" id="DistanceFromCBD" name="DistanceFromCBD" placeholder="0-50" value="0" />
+              </div>
+              <div class="col-md-4">
+                  <label for="NumberOfBathroom">Number of Bathroom:</label>
+                  <input type="number" class="form-control" id="NumberOfBathroom" name="NumberOfBathroom" placeholder="0-9" value="0" />
+              </div>
+              <div class="col-md-4">
+                  <label for="NumberOfCarPark">Number of Car Space:</label>
+                  <input type="number" class="form-control" id="NumberOfCarPark" name="NumberOfCarPark" placeholder="0-18" value="0" />
+              </div>
+              <div class="col-md-4">
+                  <label for="AmountOfLandSize">Amount of Land Size:</label>
+                  <input type="number" class="form-control" id="AmountOfLandSize" name="AmountOfLandSize" placeholder="1-434000"
+                      value="1" />
+              </div>
+              <div class="col-md-4">
+                <label for="AmountOfBuildingArea">Amount of Building Area:</label>
+                <input type="number" class="form-control" id="AmountOfBuildingArea" name="AmountOfBuildingArea" placeholder="1-45000"
+                    value="1" />
+            </div>
+            <div class="col-md-4">
+                <label for="NumberOfPropertyCount">Property Count:</label>
+                <input type="number" class="form-control" id="NumberOfPropertyCount" name="NumberOfPropertyCount" placeholder="83-21650"
+                    value="83" />
+            </div>
+            <div class="col-md-4">
+                <label for="YearBuiltRanges">Year Built:</label>
+                <input type="number" class="form-control" id="YearBuiltRanges" name="YearBuiltRanges" placeholder="1830-2019"
+                    value="1830" />
+            </div>
+            <div class="col-md-4">
+                <label for="NumberOfCrimeRate">Crime Rate Number:</label>
+                <input type="number" class="form-control" id="NumberOfCrimeRate" name="NumberOfCrimeRate" placeholder="55-1013"
+                    value="55" />
+            </div>
+            <div class="col-md-4">
+                <label for="NumberOfNearbySchools">Nearby Schools Count:</label>
+                <input type="number" class="form-control" id="NumberOfNearbySchools" name="NumberOfNearbySchools" placeholder="0-26"
+                    value="0" />
+            </div>           
+                  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+              </form>
+              <H1>{{prediction_1}}</H1>
             </div>
           </div>
         </div>

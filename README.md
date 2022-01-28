@@ -9,6 +9,7 @@ Housing prices are an important reflection of the economy and knowing the housin
 1. Please run "python app.py" in gitbash
 2. Then access the web through http://127.0.0.1:5000/
 3. you are good to go to test the features out!
+4. please [click here](https://propertypriceprediction.herokuapp.com/) for webpage
 
 
 ### Problem Statement
